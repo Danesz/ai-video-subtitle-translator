@@ -1,0 +1,47 @@
+{
+  "name": "ai-video-subtitle-translator",
+  "version": "0.0.2",
+  "description": "AI video subtitle translator using on-device Gemini within Google Chrome. Works with THEOplayer or with any player that exposes TextTracks on the HTMLVideoElement (e.g. ShakaPlayer, dash.js, hls.js)",
+  "main": "dist/index.cjs.js",
+  "module": "dist/index.esm.js",
+  "types": "dist/index.d.ts",
+  "unpkg": "dist/index.umd.js",
+  "source": "src/index.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "microbundle --name AIVideoSubtitleTranslator"
+  },
+  "exports": {
+    ".": {
+      "import": "./dist/index.esm.js",
+      "require": "./dist/index.cjs.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Danesz/ai-video-subtitle-translator.git"
+  },
+  "keywords": [
+    "gemini",
+    "llm",
+    "chrome",
+    "browser",
+    "subtitle",
+    "translator"
+  ],
+  "author": "Daniel Dallos",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Danesz/ai-video-subtitle-translator/issues"
+  },
+  "homepage": "https://github.com/Danesz/ai-video-subtitle-translator#readme",
+  "devDependencies": {
+    "@types/node": "^22.9.4",
+    "microbundle": "0.15.1",
+    "typescript": "^5.7.2"
+  },
+  "dependencies": {
+    "@types/dom-chromium-ai": "^0.0.4"
+  }
+}
